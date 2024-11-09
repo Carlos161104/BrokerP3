@@ -1,5 +1,7 @@
 from socket import *
 
+def send_video_to_server(conn, video_path):
+    return None
 
 def Main():
     host= "localhost" #IP del broker, Rene se la come.
@@ -10,5 +12,12 @@ def Main():
     mySocket.connect(address)
 
     #Enviar el tipo 1 para el server sepa que soy un cliente
-    mySocket.send('2'.encode())
+    mySocket.send('1'.encode())
     print("Enviando el tipo ...")
+
+    #Enviar el video.
+    video_path = 'input_video.mp4'
+    send_video_to_server(mySocket, video_path)
+
+if __name__ == "__main__":
+    Main()
