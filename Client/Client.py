@@ -1,7 +1,5 @@
 from socket import *
-
-def send_video_to_server(conn, video_path):
-    return None
+from utils.sendVideo import send_video_to_server
 
 def Main():
     host= "localhost" #IP del broker, Rene se la come.
